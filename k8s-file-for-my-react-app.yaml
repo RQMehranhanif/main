@@ -34,5 +34,9 @@ kind: Service
 metadata:
   name: my-new-app
 spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 8080
   selector:
     app: my-new-app
