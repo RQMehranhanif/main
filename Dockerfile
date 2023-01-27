@@ -1,6 +1,8 @@
 # Use the official Node.js image as the base image
 FROM node:12
 
+RUN apt-get update && apt-get upgrade -y \
+    && apt-get clean
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
