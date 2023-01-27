@@ -1,13 +1,11 @@
 # Use the official Node.js image as the base image
 FROM node:12
 
-RUN apt-get update && apt-get upgrade -y \
-    && apt-get clean
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
 # Copy the package.json and package-lock.json files to the container
-COPY package*.json
+COPY package*.json ./
 
 # Install the app's dependencies in the container
 RUN npm install
