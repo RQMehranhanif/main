@@ -1,9 +1,9 @@
 # Use the official Node.js image as the base image
-FROM node:12
+FROM node:alpine
 # Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /app
 # Copy the package.json and package-lock.json files to the container
-COPY package*.json ./
+COPY package.json ./
 # Install the app's dependencies in the container
 RUN npm install
 # Copy the rest of the app's code to the container
