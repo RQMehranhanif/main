@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-react-app
+  name: my-new-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-react-app
+      app: my-new-app
   template:
     metadata:
       labels:
-        app: my-react-app
+        app: my-new-app
     spec:
       containers:
         - name: reactjs
-          image: mehranhanif007/my-react-app
+          image: mehranhanif007/my-new-app1.0.1
 
           resources:
             requests:
@@ -53,7 +53,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-react-app
+  name: my-new-app
 spec:
   type: NodePort
   ports:
