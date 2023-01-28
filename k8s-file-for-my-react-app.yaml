@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: reactjs
-          image: mehranhanif007/my-new-app1.0.1
+          image: mehranhanif007/my-new-app
 
           resources:
             requests:
