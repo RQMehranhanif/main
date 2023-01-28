@@ -4,6 +4,7 @@ FROM node:12
 WORKDIR /usr/src/app
 # Copy the package.json and package-lock.json files to the container
 COPY package*.json ./
+ADD package.json /usr/src/app/package.json
 # Install the app's dependencies in the container
 RUN npm install
 # Copy the rest of the app's code to the container
