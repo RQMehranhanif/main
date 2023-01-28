@@ -8,5 +8,7 @@ COPY package.json .
 RUN npm install
 # Copy the rest of the app's code to the container
 COPY . .
+# Build the React app in the container
+RUN npm run build
 # Start the app
 CMD [ "npm", "start" ]
