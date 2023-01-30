@@ -15,8 +15,7 @@ spec:
       containers:
         - name: reactjs
           image: mehranhanif007/my-new-app:latest
-                  imagePullPolicy: Never
-                  restartPolicy: Never
+                 
           ports:
             - containerPort: 3000
 
